@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+    defer></script>
+  <link rel="stylesheet" href="./CSS/Style.css">
+  <title>Home | Tastes & Takes By T</title>
+</head>
+
+<style>
+
+/* Default: Show 4 cards per row */
+.card {
+  width: 22%; /* Adjust based on preference */
+  min-width: 250px;
+}
+
+/* Tablet: Show 2 cards per row */
+@media (max-width: 992px) {
+  .card {
+    width: 45%;
+  }
+}
+
+/* Mobile: Show 1 card per row */
+@media (max-width: 576px) {
+  .card {
+    width: 90%; /* Full width with some margin */
+  }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
+</style>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <img id="logo" src="Assets/Tia logo.jpg" alt="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://forms.gle/uPSruwa71LajL2QJ7">Order Now</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                What we offer?
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./HTML/cakes.html">Cakes</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./HTML/cupcakes.html">Cupcakes</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./HTML/sugarfree.html">Sugar-free</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./HTML/wantmore.html">Want more?</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <video width="100%" height="%" autoplay loop muted>
+            <source src="./Assets/promo march 2025.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="..." class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </header>
+
+
+  <main>
+    <div class="product-container">
+      <div class="card">
+        <img src="./Assets/cakes B&W.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Cakes 🍰</h5>
+          <p class="card-text">Freshly baked, flavorful cakes for every occasion.</p>
+          <a href="./HTML/cakes.html" class="btn btn-primary" id="btn">View more!</a>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="./Assets/cupcakes.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Cupcakes 🧁</h5>
+          <p class="card-text">Delicious, beautifully decorated cupcakes in a variety of flavors.</p>
+          <a href="./HTML/cupcakes.html" class="btn btn-primary" id="btn">View more!</a>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="./Assets/sugar-free.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Sugar-Free Treats 🍪</h5>
+          <p class="card-text">Guilt-free, no-sugar-added treats that taste just as good!</p>
+          <a href="./HTML/sugarfree.html" class="btn btn-primary" id="btn">View more!</a>
+        </div>
+      </div>
+  
+      <div class="card">
+        <img src="./Assets/wantmore.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">"Want More" Specials 🎉</h5>
+          <p class="card-text">Limited-time and seasonal treats—discover something new!</p>
+          <a href="./HTML/wantmore.html" class="btn btn-primary" id="btn">View more!</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+
+  <footer id="footer" class="bg-dark text-white py-4">
+    <p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p>Newlands</p>
+          <p>Cape Town, Western Cape</p>
+          <a href="mailto: takes.tastes.byt@gmail.com? subject=Inquiry/Order">Email: takes.tastes.byt@gmail.com</a>
+        </div>
+        
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="./index.html" class="text-white">Home</a></li>
+            <li><a href="./HTML/cakes.html" class="text-white">Cakes</a></li>
+            <li><a href="./HTML/cupcakes.html" class="text-white">Cupcakes</a></li>
+            <li><a href="../HTML/sugarfree.html" class="text-white">Sugar-free</a></li>
+            <li><a href="../HTML/wantmore.html" class="text-white">Want more!</a></li>
+
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://www.instagram.com/tastes.by.t/" class="text-white"><i
+                  class="fab fa-instaagram"></i>Instagram</a></li>
+            <li><a href="https://www.facebook.com/share/168kW4dQ2H/?mibextid=wwXIfr" class="text-white"><i
+                  class="fab fa-facebook"></i>Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@tastes.by.t?_t=ZM-8uKQ4A6BqE9&_r=1" class="text-white"><i
+                  class="fab fa-tiktok"></i>Tiktok</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    </p>
+    <br>
+  </p>
+<p>
+
+  <div class="text-center py-3">
+    <p>&copy; 2024 Tastes By T. All rights reserved.</p>
+  </div>
+  
+</p>
+  </footer>
+
+</body>
+
+</html>
