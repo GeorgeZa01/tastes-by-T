@@ -1,0 +1,6 @@
+# robots.txt for Tastes By T
+# Allow all user agents and point them to the sitemap
+User-agent: *
+Disallow:
+
+Sitemap: https://www.tastesbyt.co.za/sitemap.xml
