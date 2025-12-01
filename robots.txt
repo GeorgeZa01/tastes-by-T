@@ -3,4 +3,5 @@
 User-agent: *
 Disallow:
 
+# Specify the location of the sitemap for search engines
 Sitemap: https://www.tastesbyt.co.za/sitemap.xml
