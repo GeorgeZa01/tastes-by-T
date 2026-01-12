@@ -118,7 +118,6 @@
             animation: dotPulse 1.5s infinite ease-in-out 0.4s;
         }
 
-        /* Snow effect styles */
     </style>
 </head>
 
@@ -129,6 +128,17 @@
     <div id="root" class="flex flex-col min-h-screen">
 
 
+    </div>
+
+    <!-- Pop-up Modal -->
+    <div id="popup-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-6 max-w-md mx-4 shadow-lg">
+            <img src="./assets/Valentines/pomo.jpeg" alt="Valentine's Special" class="w-full h-auto mb-4 rounded">
+            <div class="text-center">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSemZzwI99mdabw1FD65ZyB7phvcI04gE4wOmLrODAOljmuMXg/viewform" class="inline-block bg-brand-hotpink text-white font-bold py-2 px-6 rounded-full hover:bg-brand-black transition-colors">Order Now</a>
+                <button onclick="document.getElementById('popup-modal').classList.add('hidden')" class="ml-2 bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-700 transition-colors">Close</button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -150,6 +160,10 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
         `;
+
+        const showValentinePopup = () => {
+            document.getElementById('popup-modal').classList.remove('hidden');
+        };
 
         /** * Toggles the mobile menu state and updates the button icon and content visibility.
           */
@@ -327,7 +341,11 @@
                 <li>
                     <a href="#category/${cat.id}" class="text-brand-black hover:text-brand-hotpink transition-colors">${cat.title}</a>
                 </li>
-            `).join('');
+            `).join('') + `
+                <li>
+                    <button onclick="showValentinePopup()" class="text-brand-black hover:text-brand-hotpink transition-colors">Valentine's Day ♥</button>
+                </li>
+            `;
 
             // Updated mobile links with hover highlight on the whole block
             const mobileNavLinks = CATEGORIES.map(cat => `
@@ -339,7 +357,13 @@
                         ${cat.title}
                     </a>
                 </li>
-            `).join('');
+            `).join('') + `
+                <li>
+                    <button onclick="showValentinePopup()" class="block py-3 px-4 text-brand-black text-lg rounded-lg hover:bg-brand-pastel transition-colors">
+                        Valentine's Day ♥
+                    </button>
+                </li>
+            `;
 
             return `
                 <header class="sticky top-0 z-50 bg-brand-white shadow-md border-b border-gray-100">
@@ -791,7 +815,10 @@ ${HAMBURGER_ICON}
         };
 
         // Attach routing logic to window events
-        window.onload = handleRouting;
+        window.onload = () => {
+            handleRouting();
+            document.getElementById('popup-modal').classList.remove('hidden');
+        };
         window.addEventListener('hashchange', handleRouting);
     </script>
 </body>
