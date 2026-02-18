@@ -330,11 +330,7 @@
                 <li>
                     <a href="#category/${cat.id}" class="text-brand-black hover:text-brand-hotpink transition-colors">${cat.title}</a>
                 </li>
-            `).join('') + `
-                <li>
-                    <button onclick="showValentinePopup()" class="text-brand-black hover:text-brand-hotpink transition-colors">Valentine's Day ♥</button>
-                </li>
-            `;
+            `).join('');
 
             // Updated mobile links with hover highlight on the whole block
             const mobileNavLinks = CATEGORIES.map(cat => `
@@ -346,13 +342,7 @@
                         ${cat.title}
                     </a>
                 </li>
-            `).join('') + `
-                <li>
-                    <button onclick="showValentinePopup()" class="block py-3 px-4 text-brand-black text-lg rounded-lg hover:bg-brand-pastel transition-colors">
-                        Valentine's Day ♥
-                    </button>
-                </li>
-            `;
+            `).join('');
 
             return `
                 <header class="sticky top-0 z-50 bg-brand-white shadow-md border-b border-gray-100">
