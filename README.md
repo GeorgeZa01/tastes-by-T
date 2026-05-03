@@ -1,5 +1,19 @@
 # React + TypeScript + Vite
 
+## Deploying to Vercel
+
+This project is configured for Vercel as a static Vite app.
+
+- Framework preset: `Vite`
+- Install command: `npm ci`
+- Build command: `npm run build`
+- Output directory: `dist`
+- Required Node version: `>=20.19.0`
+
+Environment variables should be configured in the Vercel project settings, not committed to the repo. Only variables prefixed with `VITE_` are available in the browser. Use `.env.example` as the template.
+
+Run `npm run build` locally before deploying to confirm the production bundle compiles.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
