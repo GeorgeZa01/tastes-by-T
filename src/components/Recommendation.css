@@ -1,0 +1,123 @@
+.recommendation-wrap {
+  padding-top: 0;
+}
+
+.recommendation-section {
+  position: relative;
+  overflow: hidden;
+  padding: 48px 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.recommendation-section::before {
+  content: '✦';
+  position: absolute;
+  top: 20px;
+  left: 28px;
+  color: var(--rose-light);
+  font-size: 1.4rem;
+}
+
+.recommendation-section::after {
+  content: '✦';
+  position: absolute;
+  right: 28px;
+  bottom: 20px;
+  color: var(--rose-light);
+  font-size: 1.4rem;
+}
+
+.recommendation-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.9rem;
+}
+
+.recommendation-section .subtitle {
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.recommendation-form {
+  display: flex;
+  max-width: 560px;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+.recommendation-input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px 18px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--cream);
+  color: var(--black);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.recommendation-input:focus {
+  border-color: var(--rose);
+  background: var(--white);
+}
+
+.rec-btn {
+  padding: 13px 28px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.rec-btn:hover {
+  background: var(--rose-deep);
+  transform: translateY(-1px);
+}
+
+.recommendation-error {
+  margin-top: 16px;
+  color: var(--rose-deep);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.recommendation-result {
+  margin: 24px auto 0;
+  padding: 24px;
+  border: 1px solid var(--rose-light);
+  border-radius: var(--radius-md);
+  background: var(--blush);
+}
+
+.recommendation-result h3 {
+  margin-bottom: 8px;
+  color: var(--rose);
+  font-size: 1.4rem;
+}
+
+.recommendation-result p {
+  margin-bottom: 16px;
+  color: var(--charcoal);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.recommendation-result .btn-outline {
+  align-self: center;
+}
+
+@media (max-width: 640px) {
+  .recommendation-section {
+    padding: 36px 18px;
+  }
+
+  .recommendation-form {
+    flex-direction: column;
+  }
+}
